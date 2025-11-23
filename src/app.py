@@ -1,5 +1,3 @@
-
-
 from flask import Flask, jsonify
 import datetime
 import socket
@@ -8,28 +6,22 @@ import socket
 app = Flask(__name__)
 
 
-@app.route('/api/v1/details')
+@app.route('/api/v1/info')
 
-def details():
+def info():
     return jsonify({
-        'message': 'Sample Flask Application',
-        'version': '1.0.0',
-        'description': 'This is a sample Flask application for demonstration purposes.'
+    	'time': datetime.datetime.now().strftime("%I:%M:%S%p  on %B %d, %Y"),
+    	'hostname': socket.gethostname(),
+        'message': 'You are doing great, little human! <3',
+        'deployed_on': 'kubernetes'
     })
 
 @app.route('/api/v1/healthz')
 
-
 def health():
-    return jsonify({
-        'status': 'Sample Flask Application up and running',
-        'timestamp': datetime.datetime.now().strftime("%I: %M%p %S") + 'Z',
-        'hostname': socket.gethostname()
-    }), 200
-
+	# Do an actual check here
+    return jsonify({'status': 'up'}), 200
 
 if __name__ == '__main__':
 
-
-    app.run(host='0.0.0.0')
-
+    app.run(host="0.0.0.0")
