@@ -1,10 +1,8 @@
 FROM python:3.10-alpine
 
-WORKDIR /app
+COPY requirements.txt /tmp
 
-COPY ../requirements.txt ./requirements.txt
-
-RUN pip install -r requirements.txt
+RUN pip install -r /tmp/requirements.txt
 
 COPY ./src /src
 
