@@ -1,8 +1,10 @@
 FROM python:3.10-alpine
 
-COPY requirements.txt /tmp
+WORKDIR /app
 
-RUN pip install -r /tmp/requirements.txt
+COPY ../requirements.txt ./requirements.txt
+
+RUN pip install -r requirements.txt
 
 COPY ./src /src
 
