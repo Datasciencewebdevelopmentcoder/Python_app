@@ -1,16 +1,26 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: python-app
+  annotations:
+    argocd.argoproj.io/tracking-id: test:networking.k8s.io/Ingress:python/test-python-app
+  labels:
+    app.kubernetes.io/instance: test
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: python-app
+    app.kubernetes.io/version: 1.16.0
+    helm.sh/chart: python-app-0.1.0
+  name: test-python-app
+  namespace: python
 spec:
+  ingressClassName: nginx
   rules:
-  - host: "python-app.test.com"
-    http:
+    - host: python-app.example.com
+      http:
         paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: python-app
-              port:
-                number: 8080
+          - backend:
+              service:
+                name: test-python-app
+                port:
+                  number: 5000
+            path: /
+            pathType: Prefix
