@@ -29,4 +29,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: 123kasey456/python-app:${{ env.sha_short }} 
+          tags: |
+            123kasey456/python-app:${{ env.sha_short }}
+            123kasey456/python-app:latest
+          platforms: linux/amd64,linux/arm64
