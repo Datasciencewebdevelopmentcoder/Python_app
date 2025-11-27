@@ -18,10 +18,6 @@ global:
 
 certificate:
   enabled: true
-https:
-  enabled: true
-httpRoute:
-  enabled: true
 
 server:
   ingress:
