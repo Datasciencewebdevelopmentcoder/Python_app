@@ -13,7 +13,7 @@ def info():
     	'time': datetime.datetime.now().strftime("%I:%M:%S%p  on %B %d, %Y"),
     	'hostname': socket.gethostname(),
         'message': 'You are doing great, little humans people! hello by the way!! 3 test mod',
-        'deployed_on': 'kubernete'
+        'deployed_on': 'kubernetes'
     })
 
 @app.route('/api/v1/healthz')
