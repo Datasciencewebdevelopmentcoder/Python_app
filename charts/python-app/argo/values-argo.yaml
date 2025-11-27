@@ -19,9 +19,9 @@ global:
 certificate:
   enabled: true
 https:
-  enabled: 
+  enabled: true
 httpRoute:
-  enabled: false
+  enabled: true
 
 server:
   ingress:
