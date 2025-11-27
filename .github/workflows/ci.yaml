@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     paths:
-      - src/**
+      - src/** # Trigger only on changes in the src/ directory
     branches:
       - main
 

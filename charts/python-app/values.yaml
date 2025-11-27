@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: Datasciencewebdevelopmentcoder/python-app
+  repository: 123kasey456/python-app
   pullPolicy: IfNotPresent
   tag: ed7159
 imagePullSecrets: []
