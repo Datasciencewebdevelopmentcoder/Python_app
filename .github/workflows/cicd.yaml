@@ -55,6 +55,11 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Updates values.yaml with commit ${{ needs.ci.outputs.commit_id }}"
+          author_name: "GitHub Actions"
+          author_email: "github-actions[bot]@users.noreply.github.com"
+          push: true
+          push_options: "--force"
+          token: ${{ secrets.ASSESS_TOKEN }}
 
       - name: Install ArgoCD CLI
         shell: bash
