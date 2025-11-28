@@ -16,7 +16,7 @@ def info():
         'deployed_on': 'kubernetes',
         'app_version': '1.3.0',
         'environment': 'staging',
-        'additional_info': 'This is some extra information for testing purposes.'
+        'additional_info': 'This is some extra information for testing.'
     })
 
 @app.route('/api/v1/healthz')
