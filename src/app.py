@@ -15,7 +15,8 @@ def info():
         'message': 'You are doing great, little humans people! hello by the way!! 3',
         'deployed_on': 'kubernetes',
         'app_version': '1.3.0',
-        'environment': 'staging'
+        'environment': 'staging', 
+        'additional_info': 'This is some extra info for testing purposes.'
     })
 
 @app.route('/api/v1/healthz')
