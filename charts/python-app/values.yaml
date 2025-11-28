@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: 123kasey456/python-app
   pullPolicy: IfNotPresent
-  tag: "889584"
+  tag: "403e9b"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
