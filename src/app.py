@@ -12,9 +12,10 @@ def info():
     return jsonify({
     	'time': datetime.datetime.now().strftime("%I:%M:%S%p  on %B %d, %Y"),
     	'hostname': socket.gethostname(),
-        'message': 'You are doing great, little humans people! hello by the way!! 3 test mod',
-        'deployed_on': 'kubernetes, multi-image type test or go back to v2'
-        
+        'message': 'You are doing great, little humans people! hello by the way!! 3',
+        'deployed_on': 'kubernetes',
+        'app_version': '1.3.0',
+        'environment': 'staging'
     })
 
 @app.route('/api/v1/healthz')
@@ -22,7 +23,6 @@ def info():
 def health():
 	# Do an actual check here
     return jsonify({'status': 'up'}), 200
-
 
 if __name__ == '__main__':
 

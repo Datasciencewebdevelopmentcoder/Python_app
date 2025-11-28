@@ -9,7 +9,6 @@ server:
 
 repoServer:
   replicas: 1
-
 applicationSet:
   replicas: 1
 
