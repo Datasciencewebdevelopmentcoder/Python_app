@@ -10,5 +10,5 @@ plugins:
         index.md: overview/what-is-backstage.md
 
 nav:
-  - Overview:
-      - Getting Started: index.md
+  - Overview: 'overview/what-is-backstage.md'
+
