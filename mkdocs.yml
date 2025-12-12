@@ -1,14 +1,7 @@
-site_name: 'Python App'
-site_description: 'Main documentation for Python App'
-repo_url: https://github.com/Datasciencewebdevelopmentcoder/Python_app
-edit_uri: edit/main/docs/
-
-plugins:
-  - techdocs-core
-  - redirects:
-      redirect_maps:
-        index.md: overview/what-is-backstage.md
-
+site_name: Python App
+site_description: Main documentation for Python App
 nav:
-  - Overview: 'overview/what-is-backstage.md'
-
+  - Overview: index.md
+docs_dir: docs
+theme:
+  name: material
