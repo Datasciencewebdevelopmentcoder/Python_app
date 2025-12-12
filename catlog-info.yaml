@@ -5,6 +5,7 @@ metadata:
   description: An example service component
   annotations:
     github.com/project-slug: Datasciencewebdevelopmentcoder/Python_app
+    backstage.io/techdocs-ref: dir::.
 
 spec:
   type: service
